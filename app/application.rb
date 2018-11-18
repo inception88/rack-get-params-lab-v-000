@@ -44,12 +44,12 @@ class Application
     end
   end
 
-  def item_search(search_term)
+  def item_search(search_term, resp)
     if @@items.include?(search_term)
       @@cart << search_term
-      return "added #{search_term}"
+      resp.write "added #{search_term}"
     else
-      return "We don't have that item"
+      resp.write "We don't have that item"
     end
   end
 end
