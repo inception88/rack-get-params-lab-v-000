@@ -17,7 +17,7 @@ class Application
     elsif req.path.match(/cart/)
       check_cart(resp)
     elsif req.path.match(/add/)
-      search_term = req.params["q"]
+      search_term = req.params["item"]
       item_search(search_term, resp)
     else
       resp.write "Path Not Found"
