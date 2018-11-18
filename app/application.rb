@@ -17,7 +17,7 @@ class Application
     elsif req.path.match(/cart/)
       check_cart(resp)
     elsif req.path.match(/add/)
-
+      
     else
       resp.write "Path Not Found"
     end
